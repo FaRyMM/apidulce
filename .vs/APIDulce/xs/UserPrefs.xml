@@ -1,0 +1,66 @@
+﻿<Properties StartupConfiguration="{CF60A29C-480B-44AE-882E-C0D91A93181C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="APIDulce/Helpers/AutomapperProfiles.cs">
+    <Files>
+      <File FileName="APIDulce/ViewModels/UserInfo.cs" Line="13" Column="1" IsPinned="True" />
+      <File FileName="APIDulce/appsettings.json" />
+      <File FileName="APIDulce/Controllers/CategoriasController.cs" />
+      <File FileName="APIDulce/Helpers/AutomapperProfiles.cs" Line="1" Column="1" />
+      <File FileName="APIDulce/ViewModels/CategoriasViewModel.cs" />
+      <File FileName="APIDulce/Entities/Categorias.cs" />
+      <File FileName="APIDulce/ViewModels/CategoriaCreateViewModel.cs" />
+      <File FileName="APIDulce/Entities/Producto.cs" />
+      <File FileName="APIDulce/Entities/Proveedor.cs" />
+      <File FileName="APIDulce/Entities/Ventas.cs" />
+      <File FileName="APIDulce/Entities/DetalleVenta.cs" />
+      <File FileName="APIDulce/Entities/ConfigPrecios.cs" />
+      <File FileName="APIDulce/ViewModels/ConfigPreciosViewModel.cs" />
+      <File FileName="APIDulce/ViewModels/DetalleVentaViewModel.cs" />
+      <File FileName="APIDulce/ViewModels/EstadoVentasViewModel.cs" />
+      <File FileName="APIDulce/ViewModels/ProductoViewModel.cs" />
+      <File FileName="APIDulce/ViewModels/VentasViewModel.cs" />
+      <File FileName="APIDulce/Entities/Categoria.cs" />
+      <File FileName="APIDulce/Entities/EstadoVentas.cs" />
+      <File FileName="APIDulce/Controllers/ProductosController.cs" />
+      <File FileName="APIDulce/ViewModels/PaginacionViewModel.cs" />
+      <File FileName="APIDulce/Helpers/HttpContextExtensions.cs" />
+      <File FileName="APIDulce/Context/DulcesDbContext.cs" />
+      <File FileName="APIDulce/Controllers/CuentasController.cs" />
+      <File FileName="APIDulce/ViewModels/UserToken.cs" />
+      <File FileName="APIDulce/ViewModels/UsuarioViewModel.cs" />
+      <File FileName="APIDulce/ViewModels/EditarRolViewModel.cs" />
+      <File FileName="APIDulce/Program.cs" />
+      <File FileName="APIDulce/Properties/launchSettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="APIDulce" expanded="True">
+            <Node name="APIDulce" expanded="True">
+              <Node name="Context" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="Helpers" expanded="True">
+                <Node name="AutomapperProfiles.cs" selected="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.APIDulce PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/fary/Projects/APIDulce/APIDulce/Controllers/CuentasController.cs" relfile="APIDulce/Controllers/CuentasController.cs" line="135" column="1" />
+      <Breakpoint file="/Users/fary/Projects/APIDulce/APIDulce/Controllers/CategoriasController.cs" relfile="APIDulce/Controllers/CategoriasController.cs" line="33" column="1" />
+      <Breakpoint file="/Users/fary/Projects/APIDulce/APIDulce/Controllers/CuentasController.cs" relfile="APIDulce/Controllers/CuentasController.cs" line="130" column="1" />
+      <Breakpoint file="/Users/fary/Projects/APIDulce/APIDulce/Controllers/CuentasController.cs" relfile="APIDulce/Controllers/CuentasController.cs" line="132" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

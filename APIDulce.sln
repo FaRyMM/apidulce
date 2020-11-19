@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIDulce", "APIDulce\APIDulce.csproj", "{CF60A29C-480B-44AE-882E-C0D91A93181C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
