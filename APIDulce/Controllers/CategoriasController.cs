@@ -47,6 +47,16 @@ namespace APIDulce.Controllers
             return mapper.Map<CategoriasViewModel>(entidad);
         }
 
+        [Route("prueba")]
+        [HttpGet]
+        public async Task<ActionResult<List<CategoriasViewModel>>> GetPrueba()
+        {
+            var entidades = await context.Categorias.ToListAsync();
+            var vm = mapper.Map<List<CategoriasViewModel>>(entidades).ToList();
+            return vm;
+        }
+
+
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] CategoriaCreateViewModel vmcreate)
         {
