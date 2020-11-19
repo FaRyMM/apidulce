@@ -19,5 +19,6 @@ namespace APIDulce.Context
         public DbSet<Producto> Productos { get; set; }
         //public DbSet<Proveedor> Proveedor { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
+        public DbSet<Proveedor> Proveedores { get; set; }
     }
 }

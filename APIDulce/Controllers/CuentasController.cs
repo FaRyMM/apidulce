@@ -72,7 +72,7 @@ namespace APIDulce.Controllers
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                ModelState.AddModelError(string.Empty, "Login Invalido, Intentalo de nuevo...");
                 return BadRequest(ModelState);
             }
         }

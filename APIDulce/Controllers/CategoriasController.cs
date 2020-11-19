@@ -27,6 +27,7 @@ namespace APIDulce.Controllers
             this.mapper = mapper;
         }
 
+
         [HttpGet]
         public async Task<ActionResult<List<CategoriasViewModel>>> Get()
         {

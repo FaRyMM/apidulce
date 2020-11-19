@@ -100,7 +100,7 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.6": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.10": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
@@ -3325,10 +3325,10 @@
         "microsoft.aspnetcore.authentication.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.6": {
-      "sha512": "XT5yph4cdiMbas6FyvVafCKfg1QgPZM7Ssma7aDCG0Ee8JhZMMpXGottBeUC43/lDHCaw8wTq29HOKOTDB41vA==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.10": {
+      "sha512": "0FwXX6sTTXBq+ZajtT9VSNNFfmzsFL7Jiy4Qj4qT5qBbUPry26V2rh8QMWn52J2+81q9u7Bm0YKfsClu22VTMA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.6",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3336,7 +3336,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.3.1.6.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.3.1.10.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -5106,7 +5106,7 @@
       ]
     },
     "runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "zWLOQ77Y4FV/6Vw2g+FYzprbQX5/xKvjoCLe4L9159Aw1bSboQoJ1KRZFNdexDooWRAIsLSdE0ZokkrVkwN8Yw==",
+      "sha512": "b3pthNgxxFcD+Pc0WSEoC0+md3MyhRS6aCEeenvNE3Fdw1HyJ18ZhRFVJJzIeR/O/jpxPboB805Ho0T3Ul7w8A==",
       "type": "package",
       "path": "runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5145,7 +5145,7 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "/p8IQT2brFMDa7BHMH71LV+w5Tb3OxoLHxhn6+MGqN5xeqhM2HRHmj+7xQGJnaRn73d7ZTvp6yRCFMvolws4wA==",
+      "sha512": "X7IdhILzr4ROXd8mI1BUCQMSHSQwelUlBjF1JyTKCjXaOGn2fB4EKBxQbCK2VjO3WaWIdlXZL3W6TiIVnrhX4g==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5158,7 +5158,7 @@
       ]
     },
     "runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "T5NvFgmHX0WH4c7lP72krsnk+IJI10vJf2j2twGE+5QBRA4RyRAgD+ZjEgdmpLOjW4B+nZGaadewTCUcR899OQ==",
+      "sha512": "nyFNiCk/r+VOiIqreLix8yN+q3Wga9+SE8BCgkf+2BwEKiNx6DyvFjCgkfV743/grxv8jHJ8gUK4XEQw7yzRYg==",
       "type": "package",
       "path": "runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5171,7 +5171,7 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5184,7 +5184,7 @@
       ]
     },
     "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "YWzJvhiC+iLWI/IfpPQUIBhYnAHUFQFRDqR7VDNmPj0b3rjW7dArFqKysZ9v0iSBs9Ih4v9GasLpYCSUwADMQQ==",
+      "sha512": "I8bKw2I8k58Wx7fMKQJn2R8lamboCAiHfHeV/pS65ScKWMMI0+wJkLYlEKvgW1D/XvSl/221clBoR2q9QNNM7A==",
       "type": "package",
       "path": "runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5197,7 +5197,7 @@
       ]
     },
     "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "1uVTITQP8/cI6YoO6FqfW1pzP0k2TnDZ3TFD88Bu/9H7ZuTsMY9xmadbGpwPu8w8swcd1ifZJsjD9hF9O6C/tg==",
+      "sha512": "VB5cn/7OzUfzdnC8tqAIMQciVLiq2epm2NrAm1E9OjNRyG4lVhfR61SMcLizejzQP8R8Uf/0l5qOIbUEi+RdEg==",
       "type": "package",
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -5722,7 +5722,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "KMVuoQ+8bMQ/Z59M3s64num5AD74X5YSqVc7ibwGkPTfmmkl2W8VuSxLRJtpw4KzQrSKUgR0BLbF0adPfcTSGQ==",
+      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -5760,7 +5760,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "HZiP0DwTHJ+C+rdFqP47nBYUh5283kcwXIGY2zOVVhsJmVI/2tYiX2zNRdjRQRHsTox58Ydkec6h0pWSh8wAsw==",
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -8448,7 +8448,7 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
+      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -9551,12 +9551,11 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -9703,7 +9702,7 @@
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1",
       "Microsoft.AspNetCore.Authentication >= 2.2.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.6",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.10",
       "Microsoft.AspNetCore.Authorization >= 3.1.6",
       "Microsoft.AspNetCore.Http >= 2.2.2",
       "Microsoft.AspNetCore.Http.Extensions >= 2.2.0",
@@ -9720,32 +9719,35 @@
     ]
   },
   "packageFolders": {
-    "/Users/fary/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\FaRy\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/fary/Projects/APIDulce/APIDulce/APIDulce.csproj",
+      "projectUniqueName": "C:\\Users\\FaRy\\Desktop\\APIDulce\\APIDulce\\APIDulce.csproj",
       "projectName": "APIDulce",
-      "projectPath": "/Users/fary/Projects/APIDulce/APIDulce/APIDulce.csproj",
-      "packagesPath": "/Users/fary/.nuget/packages/",
-      "outputPath": "/Users/fary/Projects/APIDulce/APIDulce/obj/",
+      "projectPath": "C:\\Users\\FaRy\\Desktop\\APIDulce\\APIDulce\\APIDulce.csproj",
+      "packagesPath": "C:\\Users\\FaRy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FaRy\\Desktop\\APIDulce\\APIDulce\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/fary/.config/NuGet/NuGet.Config"
+        "C:\\Users\\FaRy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -9757,6 +9759,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -9768,7 +9771,7 @@
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[3.1.6, )"
+            "version": "[3.1.10, )"
           },
           "Microsoft.AspNetCore.Authorization": {
             "target": "Package",
@@ -9843,7 +9846,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -9852,7 +9855,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.Cors 5.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.AspNet.Cors 5.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.AspNet.Cors",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -9862,7 +9865,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Owin 4.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.Owin 4.1.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -9872,7 +9875,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Owin.Cors 4.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.Owin.Cors 4.1.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.Owin.Cors",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -9882,7 +9885,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Owin 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

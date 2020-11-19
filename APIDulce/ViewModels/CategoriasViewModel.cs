@@ -9,6 +9,5 @@ namespace APIDulce.ViewModels
         [Required]
         [StringLength(30)]
         public string nombre { get; set; }
-        public bool Subcategoria { get; set; }
     }
 }
