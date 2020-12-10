@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using APIDulce.Context;
+using APIDulce.Servicios;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -43,6 +44,8 @@ namespace APIDulce
                               })
             );
             services.AddAutoMapper(typeof(Startup));
+            services.AddTransient<IAlamacenadorArchivos, AlmacenadorArchivos>();
+            services.AddHttpContextAccessor();
             services.AddDbContext<DulcesDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));
             services.AddControllers();
             services.AddMvc(options => options.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
@@ -75,7 +78,7 @@ namespace APIDulce
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseRouting();
             app.UseCors("MyAllowSpecificOrigins");
             app.UseAuthorization();

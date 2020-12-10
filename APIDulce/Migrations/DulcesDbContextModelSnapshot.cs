@@ -21,7 +21,7 @@ namespace APIDulce.Migrations
 
             modelBuilder.Entity("APIDulce.Entities.Categorias", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -31,26 +31,26 @@ namespace APIDulce.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
                     b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("APIDulce.Entities.ConfigPrecios", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("FechaDesde")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaHasta")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("ImpuestoId")
+                        .HasColumnType("int");
 
                     b.Property<double>("PrecioCompra")
                         .HasColumnType("float");
@@ -61,7 +61,9 @@ namespace APIDulce.Migrations
                     b.Property<int>("ProductoId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
+
+                    b.HasIndex("ImpuestoId");
 
                     b.HasIndex("ProductoId");
 
@@ -70,7 +72,7 @@ namespace APIDulce.Migrations
 
             modelBuilder.Entity("APIDulce.Entities.DetalleVenta", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -78,19 +80,30 @@ namespace APIDulce.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
+                    b.Property<int>("Descuento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ImpuestoId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
+
                     b.Property<int>("ProductoId")
                         .HasColumnType("int");
 
                     b.Property<double>("Total")
                         .HasColumnType("float");
 
-                    b.Property<double>("TotalIpsi")
+                    b.Property<double>("TotalImpuesto")
                         .HasColumnType("float");
 
                     b.Property<int>("VentasId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
+
+                    b.HasIndex("ImpuestoId");
 
                     b.HasIndex("ProductoId");
 
@@ -101,22 +114,58 @@ namespace APIDulce.Migrations
 
             modelBuilder.Entity("APIDulce.Entities.EstadoVentas", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Descripcion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
                     b.ToTable("EstadosVentas");
                 });
 
+            modelBuilder.Entity("APIDulce.Entities.Impuestos", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("valor")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Impuestos");
+                });
+
+            modelBuilder.Entity("APIDulce.Entities.Marcas", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Marcas");
+                });
+
             modelBuilder.Entity("APIDulce.Entities.Producto", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -124,28 +173,39 @@ namespace APIDulce.Migrations
                     b.Property<bool>("Activo")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoriasId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Descripcion")
+                    b.Property<string>("CodProducto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProveedorId")
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(80)")
+                        .HasMaxLength(80);
+
+                    b.Property<string>("Imagen")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MarcaId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int>("Peso")
+                        .HasColumnType("int");
 
-                    b.HasIndex("CategoriasId");
+                    b.Property<int>("SubcategoriaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("MarcaId");
+
+                    b.HasIndex("SubcategoriaId");
 
                     b.ToTable("Productos");
                 });
 
             modelBuilder.Entity("APIDulce.Entities.Proveedor", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -154,21 +214,47 @@ namespace APIDulce.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
                     b.ToTable("Proveedores");
                 });
 
-            modelBuilder.Entity("APIDulce.Entities.Ventas", b =>
+            modelBuilder.Entity("APIDulce.Entities.Subcategorias", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("EstadoId")
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.ToTable("Subcategorias");
+                });
+
+            modelBuilder.Entity("APIDulce.Entities.Ventas", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Envio")
+                        .HasColumnType("float");
+
+                    b.Property<int?>("EstadoID")
                         .HasColumnType("int");
 
                     b.Property<int>("EstadoVentaId")
@@ -177,7 +263,10 @@ namespace APIDulce.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime2");
 
-                    b.Property<double>("TotalIpsi")
+                    b.Property<DateTime>("FechaFin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("TotalImpuesto")
                         .HasColumnType("float");
 
                     b.Property<double>("TotalVenta")
@@ -186,9 +275,9 @@ namespace APIDulce.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("ID");
 
-                    b.HasIndex("EstadoId");
+                    b.HasIndex("EstadoID");
 
                     b.ToTable("Ventas");
                 });
@@ -391,8 +480,14 @@ namespace APIDulce.Migrations
 
             modelBuilder.Entity("APIDulce.Entities.ConfigPrecios", b =>
                 {
-                    b.HasOne("APIDulce.Entities.Producto", "Producto")
+                    b.HasOne("APIDulce.Entities.Impuestos", "Impuesto")
                         .WithMany()
+                        .HasForeignKey("ImpuestoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("APIDulce.Entities.Producto", "Producto")
+                        .WithMany("Precios")
                         .HasForeignKey("ProductoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -400,6 +495,12 @@ namespace APIDulce.Migrations
 
             modelBuilder.Entity("APIDulce.Entities.DetalleVenta", b =>
                 {
+                    b.HasOne("APIDulce.Entities.Impuestos", "Impuesto")
+                        .WithMany()
+                        .HasForeignKey("ImpuestoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("APIDulce.Entities.Producto", "Producto")
                         .WithMany()
                         .HasForeignKey("ProductoId")
@@ -415,9 +516,24 @@ namespace APIDulce.Migrations
 
             modelBuilder.Entity("APIDulce.Entities.Producto", b =>
                 {
-                    b.HasOne("APIDulce.Entities.Categorias", "Categorias")
+                    b.HasOne("APIDulce.Entities.Marcas", "Marca")
                         .WithMany()
-                        .HasForeignKey("CategoriasId")
+                        .HasForeignKey("MarcaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("APIDulce.Entities.Subcategorias", "Subcategoria")
+                        .WithMany()
+                        .HasForeignKey("SubcategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("APIDulce.Entities.Subcategorias", b =>
+                {
+                    b.HasOne("APIDulce.Entities.Categorias", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -426,7 +542,7 @@ namespace APIDulce.Migrations
                 {
                     b.HasOne("APIDulce.Entities.EstadoVentas", "Estado")
                         .WithMany()
-                        .HasForeignKey("EstadoId");
+                        .HasForeignKey("EstadoID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

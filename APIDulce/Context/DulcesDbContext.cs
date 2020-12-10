@@ -10,9 +10,11 @@ namespace APIDulce.Context
         {
         }
 
-        
+
 
         public DbSet<Categorias> Categorias { get; set; }
+        public DbSet<Impuestos> Impuestos { get; set; }
+        public DbSet<Subcategorias> Subcategorias { get; set; }
         public DbSet<ConfigPrecios> ConfigPrecios { get; set; }
         public DbSet<DetalleVenta> DetalleVenta { get; set; }
         public DbSet<EstadoVentas> EstadosVentas { get; set; }
@@ -20,5 +22,6 @@ namespace APIDulce.Context
         //public DbSet<Proveedor> Proveedor { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
+        public DbSet<Marcas> Marcas { get; set; }
     }
 }

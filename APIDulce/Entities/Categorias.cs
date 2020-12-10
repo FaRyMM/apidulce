@@ -5,7 +5,8 @@ namespace APIDulce.Entities
 {
         public class Categorias
         {
-            public int Id { get; set; }
+            [Key]
+            public int ID { get; set; }
             [Required]
             [StringLength(30)]
             public string nombre { get; set; }

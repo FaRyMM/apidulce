@@ -6,11 +6,10 @@
 
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Entities\" />
     <Folder Include="Context\" />
     <Folder Include="Helpers\" />
-    <Folder Include="ViewModels\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Owin.Cors" Version="4.1.0" />

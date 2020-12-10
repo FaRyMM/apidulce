@@ -1,7 +1,8 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIDulce", "APIDulce\APIDulce.csproj", "{CF60A29C-480B-44AE-882E-C0D91A93181C}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIDulce", "APIDulce\APIDulce.csproj", "{CF60A29C-480B-44AE-882E-C0D91A93181C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +14,11 @@ Global
 		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF60A29C-480B-44AE-882E-C0D91A93181C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D99028E8-5B31-43CC-B3BF-83B4C9817BF4}
 	EndGlobalSection
 EndGlobal

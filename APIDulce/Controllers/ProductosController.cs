@@ -10,26 +10,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIDulce.Helpers;
 using System.Linq;
+using System.IO;
+using APIDulce.Servicios;
 
 namespace APIDulce.Controllers
 {
     [ApiController]
     [Route("api/productos")]
-    public class ProductosController
+    public class ProductosController : ControllerBase
     {
         private readonly DulcesDbContext context;
         private readonly IMapper mapper;
+        private readonly IAlamacenadorArchivos alamacenadorArchivos;
 
-        public ProductosController(DulcesDbContext context, IMapper mapper)
+        public ProductosController(DulcesDbContext context, IMapper mapper, IAlamacenadorArchivos almacenadorarchivos)
         {
             this.context = context;
             this.mapper = mapper;
+            this.alamacenadorArchivos = almacenadorarchivos;
         }
+
+
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductoViewModel>>> Get([FromQuery] PaginacionViewModel paginas)
         {
-            var query = context.Productos.AsQueryable().Include(pr => pr.Categorias);
+            var query = context.Productos.Include(pr => pr.Subcategoria).Include(pr => pr.Marca); //.ThenInclude(x => x.Caracteristica);
             var totalRegistros = query.Count();
             var productos = await query
                 .Skip(paginas.CantidadRegistrosPorPagina * (paginas.Pagina - 1))
@@ -37,7 +43,7 @@ namespace APIDulce.Controllers
                 .ToListAsync();
 
 
-            var entidades = await context.Productos.Include(prod => prod.Categorias).ToListAsync();
+            var entidades = await context.Productos.Include(prod => prod.Subcategoria).Include(pr => pr.Marca).ToListAsync();
             //var entidades = await context.Productos.ToListAsync();
             var vm = mapper.Map<List<ProductoViewModel>>(entidades);
             //return entidades;
@@ -47,8 +53,8 @@ namespace APIDulce.Controllers
         [HttpGet("{id}", Name = "ObtenerProducto")]
         public async Task<ActionResult<ProductoViewModel>> Get(int id)
         {
-            var entidad = await context.Productos.Include(opt => opt.Categorias).FirstOrDefaultAsync(x => x.Id == id);
-            if(entidad == null)
+            var entidad = await context.Productos.Include(opt => opt.Subcategoria).FirstOrDefaultAsync(x => x.ID == id);
+            if (entidad == null)
             {
                 return new NotFoundResult();
             }
@@ -56,13 +62,52 @@ namespace APIDulce.Controllers
         }
 
         [HttpPost]
-        public async Task<ProductoViewModel> Post([FromBody] ProductoViewModel vmcreate)
+        public async Task<GetProductoViewModel> Post([FromForm] ProductoViewModel vmcreate)
         {
+
             var entidad = mapper.Map<Producto>(vmcreate);
+
+            if (vmcreate.Imagen != null)
+            {
+                using (var memorystream = new MemoryStream())
+                {
+                    await vmcreate.Imagen.CopyToAsync(memorystream);
+                    var contenido = memorystream.ToArray();
+                    var extension = Path.GetExtension(vmcreate.Imagen.FileName);
+                    entidad.Imagen = await alamacenadorArchivos.GuardarArchivo(contenido, extension, "productos", vmcreate.Imagen.ContentType);
+                }
+            }
+
             context.Add(entidad);
             await context.SaveChangesAsync();
-            var vm = mapper.Map<ProductoViewModel>(entidad);
+            var vm = mapper.Map<GetProductoViewModel>(entidad);
             return vm;
+
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, [FromForm] ProductoViewModel vm)
+        {
+
+            var productoDB = await context.Productos.FirstOrDefaultAsync(x => x.ID == id);
+
+            if(productoDB == null) { return NotFound(); }
+
+            productoDB = mapper.Map(vm, productoDB);
+
+            if (vm.Imagen != null)
+            {
+                using (var memorystream = new MemoryStream())
+                {
+                    await vm.Imagen.CopyToAsync(memorystream);
+                    var contenido = memorystream.ToArray();
+                    var extension = Path.GetExtension(vm.Imagen.FileName);
+                    productoDB.Imagen = await alamacenadorArchivos.EditarArchivo(contenido, extension, "productos", productoDB.Imagen, vm.Imagen.ContentType);
+                }
+            }
+
+            await context.SaveChangesAsync();
+            return NoContent();
 
         }
 
